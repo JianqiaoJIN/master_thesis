@@ -28,4 +28,4 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 
 \* The OPUAD algorithm takes the third place, here only shows other two outstanding algorithms, the full scoreborad you can see https://github.com/numenta/NAB
 
-\* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. Here no details will be given. 
+\* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. 
