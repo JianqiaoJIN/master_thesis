@@ -3,10 +3,10 @@ Anomaly Detection and Exploratory Causal Analysis for SAP HANA
 Welcome. This repository contains the codes and implementations of my master thesis. My master thesis is mainly concentrated on two topics: anomaly detection for streaming data and Granger causality analysis among multivariate time series data. 
 
 
-#### Anomaly Detection
+### Anomaly Detection
 An online algorithm called OPUAD (Online Prototypes Update Anomaly Detetion) is proposed to detect anomalies for streaming applications in an unsupervised, automated fashion without supervison, which makes it self-adaptive and computationally efficient. The algorithm is evaluated by the Numenta Anomaly Benchmark (NAB) https://github.com/numenta/NAB. 
 
-##### Dependencies
+#### Dependencies
 Python is chosen for implementation and the following dependencies are required to implement the OPUAD algorithm:
 - Python 2.7
 - numpy
@@ -14,7 +14,7 @@ Python is chosen for implementation and the following dependencies are required 
 - pandas
 - nupic 
 
-##### Scoreboard
+#### Scoreboard
 
 The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the perfect detector), and a baseline of 0.0 is determined by the "null" detector (which makes no detections).
 
@@ -34,4 +34,4 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 |  [EXPoSE](https://arxiv.org/abs/1601.06602v3)   | 16.4     | 3.2  | 26.9     |
 | Null          | 0.0              | 0.0           | 0.0           |
 
-\* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first.Here no details will be given. 
+\* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. Here no details will be given. 
