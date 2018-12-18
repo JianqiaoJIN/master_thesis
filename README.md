@@ -24,8 +24,8 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 | [Numenta HTM](https://github.com/numenta/nupic) | 70.5-69.7     | 62.6-61.7     | 75.2-74.2     |
 | [CAD OSE](https://github.com/smirmik/CAD) | 69.9          | 67.0          | 73.2          |
 | [OPUAD](https://github.com/JianqiaoJIN/master_thesis/tree/master/anomalyDetection)* | 64.5      | 59.5        | 68.0          |
-
 | Null          | 0.0              | 0.0           | 0.0           |
 
 \* The OPUAD algorithm takes the third place, here only shows other two outstanding algorithms, the full scoreborad you can see https://github.com/numenta/NAB
+
 \* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. Here no details will be given. 
