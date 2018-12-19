@@ -42,7 +42,7 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 \* If someone wants to evaluate the OPUAD algorithm by NAB and get the scoreboard, please adapt it to the requirements of the NAB at first.
 
 ### Granger Causality Analysis
-Except anomaly detection, discovering the temporal-causal interaction of system of multiple metrics is also an interesting research topic nowadays which can prevent the expert from contempating irrelevant metrics and find some root causes for the problems. 
+Except anomaly detection, discovering the temporal-causal interaction of system of multiple metrics is also an interesting research topic nowadays which can prevent the expert from contempating irrelevant metrics and find some root causes for the system problems. 
 
 Temporal-casual effect between time series data is commonly quantified by Granger causality. However, its basic form is not applicable to large scale data with non-linear interactions. In this repository, four variants of the Granger causality analysis are implemented and their performance are tested on the two simulated system, the one is linear VAR sytem, the other is nonlinear Henon system. 
 
