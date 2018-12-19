@@ -66,6 +66,9 @@ R is used to implement the other three methods and the following libaries are re
 - vars
 - gglasso
 
+#### Results
+
+
 ### Analysis of Historical Performance of SAP HANA
 Due to the data privacy and protection policies, SAP does not allow to public its data, therefore, the experimental results cannot be shown here. 
 
