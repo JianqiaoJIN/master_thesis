@@ -37,7 +37,7 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 
 \* The OPUAD algorithm takes the third place, the full scoreborad without OPUAD you can see https://github.com/numenta/NAB
 
-\* This repository contains only three files of 58 files provided in NAB and the corresponding results get by OPUAD algorithm
+\* This repository contains only three files of 58 files provided in NAB and the corresponding results get by OPUAD
 
 \* If someone wants to evaluate the OPUAD algorithm by NAB and get the scoreboard, please adapt it to the requirements of the NAB at first.
 
