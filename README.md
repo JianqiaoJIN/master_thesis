@@ -24,7 +24,7 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 | [Numenta HTM](https://github.com/numenta/nupic) | 70.5-69.7     | 62.6-61.7     | 75.2-74.2     |
 | [CAD OSE](https://github.com/smirmik/CAD) | 69.9          | 67.0          | 73.2          |
 | [OPUAD](https://github.com/JianqiaoJIN/master_thesis/tree/master/anomalyDetection)* | 64.5      | 59.5        | 68.0          |
-| [KNN CAD](https://github.com/numenta/NAB/tree/master/nab/detectors/knncad)&dagger; | 58.0     | 43.4  | 64.8     |
+| [KNN CAD](https://github.com/numenta/NAB/tree/master/nab/detectors/knncad) | 58.0     | 43.4  | 64.8     |
 | [Relative Entropy](http://www.hpl.hp.com/techreports/2011/HPL-2011-8.pdf) | 54.6 | 47.6 | 58.8 |
 | [Random Cut Forest](http://proceedings.mlr.press/v48/guha16.pdf) | 51.7 | 38.4 | 59.7 |
 | [Twitter ADVec v1.0.0](https://github.com/twitter/AnomalyDetection)| 47.1             | 33.6          | 53.5          |
@@ -32,13 +32,14 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 | [Etsy Skyline](https://github.com/etsy/skyline) | 35.7             | 27.1          | 44.5          |
 | Bayesian Changepoint          | 17.7              | 3.2           | 32.2           |
 |  [EXPoSE](https://arxiv.org/abs/1601.06602v3)   | 16.4     | 3.2  | 26.9     |
-| Random***       | 11.0             | 1.2          | 19.5          |
-| Null          | 0.0              | 0.0           | 0.0           |
+| Random      | 11.0             | 1.2          | 19.5          |
 | Null          | 0.0              | 0.0           | 0.0           |
 
-\* The OPUAD algorithm takes the third place, here only shows other two outstanding algorithms, the full scoreborad you can see https://github.com/numenta/NAB
+\* The OPUAD algorithm takes the third place, the full scoreborad without OPUAD you can see https://github.com/numenta/NAB
 
-\* If you want to test the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. 
+\* This repository only contains three files of 58 files provided in NAB and the corresponding results.
+
+\* If someone wants to evaluate the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. 
 
 
 ### Analysis of Historical Performance of SAP HANA
