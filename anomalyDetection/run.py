@@ -32,7 +32,6 @@ if __name__ == "__main__":
     """
         The format of the data must follows: [timestamp][value]
     """
-    data_dir = 'data'
     files = os.listdir(data_dir)
     
     for f in files:
