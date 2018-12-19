@@ -67,7 +67,7 @@ R is used to implement the other three methods and the following libaries are re
 - gglasso
 
 #### Results
-
+![](https://cloud.githubusercontent.com/assets/5317319/16424391/96508542-3d68-11e6-9917-9017e134e770.png)
 
 ### Analysis of Historical Performance of SAP HANA
 Due to the data privacy and protection policies, SAP does not allow to public its data, therefore, the experimental results cannot be shown here. 
