@@ -5,7 +5,7 @@ from scipy.stats import norm
 from nupic.algorithms import anomaly_likelihood
 
 class OPUAD():
-    def __init__(self, T, probationaryPeriod):
+    def __init__(self, T, SPATIAL_TOLERANCE, probationaryPeriod):
         # number of prototypes
         self.K = 5
 
@@ -20,14 +20,14 @@ class OPUAD():
         
         # initialize the anomaly likelihood object
         numentaLearningPeriod = int(math.floor(self.probationaryPeriod / 2.0))
-        self.anomalyLikelihood = anomaly_likelihood.AnomalyLikelihood(
-            learningPeriod=numentaLearningPeriod,
-            estimationSamples=self.probationaryPeriod-numentaLearningPeriod,
-            reestimationPeriod=100
+        self.anomalyLikelihood = anomaly_likelihood. AnomalyLikelihood(
+            learningPeriod=numentaLearningPeriod, 
+            estimationSamples=self.probationaryPeriod -numentaLearningPeriod, 
+            reestimationPeriod =100
         )
         
         # keep track of valid range for spatial anomaly detection
-        self.SPATIAL_TOLERANCE = 0.05
+        self.SPATIAL_TOLERANCE = SPATIAL_TOLERANCE
         self.minVal = None
         self.maxVal = None
         
@@ -40,9 +40,12 @@ class OPUAD():
         if (self.record == 1):
             """set prototypes"""
             self.q = np.repeat(value, self.K)
-            self.sigma = abs(value * 0.1)
+            if (value == 0):
+                self.sigma = 1
+            else:
+                self.sigma = abs(value * 0.1)
         
-        """compute anomay score"""
+        """compute anomaly score"""
         rawScore = self.calculateAnomalyScore(value)
     
         """compute anomaly likelihood"""     
@@ -56,15 +59,12 @@ class OPUAD():
         # check if there is a spatial anomaly
         # update max and min
         spatialAnomaly = False
-            
         if self.minVal != self.maxVal:
             tolerance = (self.maxVal - self.minVal) * self.SPATIAL_TOLERANCE
-            maxExpected = self.maxVal + self.SPATIAL_TOLERANCE
-            minExpected = self.minVal - self.SPATIAL_TOLERANCE
-
+            maxExpected = self.maxVal + tolerance
+            minExpected = self.minVal - tolerance
             if value > maxExpected or value < minExpected:
                 spatialAnomaly = True
-        
         if self.maxVal is None or value > self.maxVal:
             self.maxVal = value
         if self.minVal is None or value < self.minVal:
@@ -72,20 +72,17 @@ class OPUAD():
             
         if spatialAnomaly:
             finalScore = 1.0
-        
-        if value == 0:
-            finalScore = 1.0
-            
+                    
         """ report anomaly """
         alertAnomaly = 0
         if self.record > self.probationaryPeriod and finalScore >= self.T:
-            alertAnomaly = 1
+            print ("Alert: " + str(timestamp))
 
         """ update prototypes """
         if (self.record > 1):
             self.updateParameter(value)
-
-        return alertAnomaly
+        
+        return rawScore, finalScore
     
     def calculateAnomalyScore(self, value):
 
@@ -98,7 +95,8 @@ class OPUAD():
             anomalyScore = 100
         else:
             anomalyScore = - math.log(density_sum)
-
+        
+        
         return anomalyScore
     
     def updateParameter(self, value):    
@@ -110,9 +108,6 @@ class OPUAD():
         for l in range(self.K):
             tmp_C = []
             tmp_B = 0
-
-            # k -> k-th prototype
-
             for k in range(self.K):
                 tmp = (self.q[k] - self.q[l])*(self.q[k]-self.q[l])
                 C_lk = (1-tmp/(2*self.sigma*self.sigma))*np.exp(-tmp/(4*self.sigma*self.sigma))
@@ -128,5 +123,5 @@ class OPUAD():
         try:
             delta_q = np.linalg.lstsq(C, B, rcond=None)[0]
         except np.linalg.linalg.LinAlgError:
-            print "Singular Matrix"
+            print 'Singular Matrix'
         self.q = self.q + delta_q
