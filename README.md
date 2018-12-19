@@ -46,6 +46,26 @@ Except anomaly detection, discovering the temporal-causal interaction of system 
 
 Temporal-casual effect between time series data is commonly quantified by Granger causality. However, its basic form is not applicable to large scale data with non-linear interactions. In this repository, four variants of the Granger causality analysis are implemented and their performance are tested on the two simulated system, the one is linear VAR sytem, the other is nonlinear Henon system. 
 
+#### Analysis Methods
+- Bivariate Granger Causality
+- Conditional Granger Causality
+- Group Lasso Granger Causality
+- Multilayer Perceptron (MLP) Lasso Granger Causality
+
+#### Dependencies
+Python is chosen for implementation of the MLP Lasso-GC and the following dependencies are required 
+- Python 2.7
+- numpy
+- scikit-learn
+- pandas
+- pytorch
+
+R is used to implement the other three methods and the following libaries are required 
+- R 3.3
+- zoo
+- vars
+- gglasso
+
 ### Analysis of Historical Performance of SAP HANA
 Due to the data privacy and protection policies, SAP does not allow to public its data, therefore, the experimental results cannot be shown here. 
 
