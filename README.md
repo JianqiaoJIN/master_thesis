@@ -37,9 +37,9 @@ The NAB scores are normalized such that the maximum possible is 100.0 (i.e. the 
 
 \* The OPUAD algorithm takes the third place, the full scoreborad without OPUAD you can see https://github.com/numenta/NAB
 
-\* This repository only contains three files of 58 files provided in NAB and the corresponding results.
+\* This repository contains only three files of 58 files provided in NAB and the corresponding results.
 
-\* If someone wants to evaluate the OPUAD algorithm by NAB, please adapt it to the requirements of the NAB at first. 
+\* If someone wants to evaluate the OPUAD algorithm by NAB and get the scoreboard, please adapt it to the requirements of the NAB at first.
 
 
 ### Analysis of Historical Performance of SAP HANA
