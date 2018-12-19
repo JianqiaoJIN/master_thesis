@@ -74,6 +74,6 @@ Comparison Result for Nonlinear Henon System
 ![image](https://github.com/JianqiaoJIN/master_thesis/blob/master/plots/Chapter4/henon_AUC.png)
 
 ### Analysis of Historical Performance of SAP HANA
-Due to the data privacy and protection policies, SAP does not allow to public its data, therefore, the experimental results cannot be shown here. 
+Due to the data privacy and protection policies, SAP does not allow to publish its data, therefore, the experimental results cannot be shown here. 
 
 
