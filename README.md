@@ -67,7 +67,7 @@ R is used to implement the other three methods and the following libaries are re
 - gglasso
 
 #### Results
-Comparison Result for Nonlinear Henon System
+Comparison Result for linear VAR System
 ![image](https://github.com/JianqiaoJIN/master_thesis/blob/master/plots/Chapter4/var_AUC.png)
 
 Comparison Result for Nonlinear Henon System
